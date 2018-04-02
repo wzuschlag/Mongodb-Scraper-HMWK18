@@ -17,7 +17,6 @@ var ArticleSchema = new Schema({
     required: true
   },
   // Saves array of notes.
-//*****'note' in class example, check this wjz *****
   notes: [{
     type: Schema.Types.ObjectId,
     ref: "Note"

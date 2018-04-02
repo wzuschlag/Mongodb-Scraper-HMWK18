@@ -110,8 +110,6 @@ router.get("/delete/:id", function(req, res) {
 
   console.log("ID is getting read for delete" + req.params.id);
 
-  console.log("Able to activate delete function.");
-
   Article.findOneAndRemove({"_id": req.params.id}, function (err, offer) {
     if (err) {
       console.log("Not able to delete:" + err);
@@ -124,15 +122,13 @@ router.get("/delete/:id", function(req, res) {
 
 router.get("/notes/:id", function(req, res) {
 
-  console.log("ID is getting read for delete" + req.params.id);
-
-  console.log("Able to activate delete function.");
+  console.log("ID is getting read for notes" + req.params.id);
 
   Note.findOneAndRemove({"_id": req.params.id}, function (err, doc) {
     if (err) {
-      console.log("Not able to delete:" + err);
+      console.log("Notes not working:" + err);
     } else {
-      console.log("Able to delete, Yay");
+      console.log("Notes works");
     }
     res.send(doc);
   });
@@ -150,10 +146,10 @@ router.get("/articles/:id", function(req, res) {
 
   .exec(function(err, doc) {
     if (err) {
-      console.log("Not able to find article and get notes.");
+      console.log("Not able to get article and notes.");
     }
     else {
-      console.log("We are getting article and maybe notes? " + doc);
+      console.log("Getting article and notes? " + doc);
       res.json(doc);
     }
   });
@@ -189,3 +185,5 @@ router.post("/articles/:id", function(req, res) {
 });
 // Export routes for server.js to use.
 module.exports = router;
+
+

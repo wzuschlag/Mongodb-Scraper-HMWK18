@@ -38,8 +38,7 @@ app.use("/", routes);
 // ******** need to make this correct for my homework ************
 mongoose.Promise = Promise;
 // mongoose.connect("mongodb://localhost/MongoScraperHMWK18");
- mongoose.connect("mongodb://heroku_9ssgzqwh:ph3ed9839npkdec19apcc8tisd@ds023463.mlab.com:23463/heroku_9ssgzqwh");
-// mongoose.connect("mongodb://heroku_gnzk5747:4d2121nhgnfbdl1pfirsdepk9n@ds125262.mlab.com:25262/heroku_gnzk5747");
+mongoose.connect("mongodb://heroku_9ssgzqwh:ph3ed9839npkdec19apcc8tisd@ds023463.mlab.com:23463/heroku_9ssgzqwh");
 
 // Set mongoose to leverage built in JavaScript ES6 Promises Connect to the Mongo DB
 //mongoose.Promise = Promise;

@@ -1,5 +1,7 @@
+
 Body {
     background-color: #829ac6;
+    background-image: url('../images/NewspaperMetaFunnies.jpg');
 }
 
 html {
@@ -24,7 +26,7 @@ p {
 	overflow: hidden;
     background-size: 100%;
     background-position: top;
-    background-image: url('../images/14mission.jpg');
+    background-image: url('../images/nytimesFakeNews.jpg');
     background-repeat: no-repeat;
     height: 400px;
     width: 100%;

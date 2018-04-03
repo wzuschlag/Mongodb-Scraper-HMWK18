@@ -13,6 +13,8 @@ var Note = require("./models/Note.js");
 var Article = require("./models/Article.js");
 
 var PORT = process.env.PORT || 3000;
+// If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
+//var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
 // Initialize Express
 var app = express();
@@ -35,8 +37,14 @@ var routes = require("./controllers/scraper_controller.js");
 app.use("/", routes);
 // ******** need to make this correct for my homework ************
 mongoose.Promise = Promise;
-mongoose.connect("mongodb://localhost/MongoScraperHMWK18");
+// mongoose.connect("mongodb://localhost/MongoScraperHMWK18");
+ mongoose.connect("mongodb://heroku_9ssgzqwh:ph3ed9839npkdec19apcc8tisd@ds023463.mlab.com:23463/heroku_9ssgzqwh");
 // mongoose.connect("mongodb://heroku_gnzk5747:4d2121nhgnfbdl1pfirsdepk9n@ds125262.mlab.com:25262/heroku_gnzk5747");
+
+// Set mongoose to leverage built in JavaScript ES6 Promises Connect to the Mongo DB
+//mongoose.Promise = Promise;
+//mongoose.connect(MONGODB_URI, {useMongoClient: true});
+
 
 var db = mongoose.connection;
 

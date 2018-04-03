@@ -1,11 +1,7 @@
 var express = require("express");
-
 var router = express.Router();
-
 var request = require("request");
-
 var cheerio = require("cheerio");
-
 var mongoose = require("mongoose");
 
 // Set mongoose to leverage built in JavaScript
@@ -20,7 +16,6 @@ router.get("/", function(req, res) {
 
 // This will get the articles scraped and saved in db and show them in list.
 router.get("/savedarticles", function(req, res) {
-
   // Grab every doc in the Articles array
   Article.find({}, function(error, doc) {
     // Log any errors
@@ -32,7 +27,6 @@ router.get("/savedarticles", function(req, res) {
       var hbsArticleObject = {
         articles: doc
       };
-
       res.render("savedarticles", hbsArticleObject);
     }
   });
@@ -185,5 +179,3 @@ router.post("/articles/:id", function(req, res) {
 });
 // Export routes for server.js to use.
 module.exports = router;
-
-

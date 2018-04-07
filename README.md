@@ -16,3 +16,6 @@
 
 ### Click on the delete button to remove the article or the notes to add notes to the article.
 ![notes page](public/assets/images/notepage.png)
+
+Thank you
+Walter Zuschlag

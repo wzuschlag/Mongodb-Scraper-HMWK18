@@ -4,12 +4,12 @@
 
 #### The following technology will be used for this homework.
 Run npm init. When that's finished, install and save these npm packages:
--express
--express-handlebars
--mongoose
--body-parser
--cheerio
--request
+- express
+- express-handlebars
+- mongoose
+- body-parser
+- cheerio
+- request
 
 #### To launch this app in a browser use the following https.
 https://rhubarb-sundae-70868.herokuapp.com/

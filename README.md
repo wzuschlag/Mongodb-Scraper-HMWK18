@@ -1,5 +1,17 @@
 # Mongodb-Scraper-HMWK18
 
+#### In this assignment, we create a web app that lets users view and leave comments on the latest news stories. But we will not actually write any articles; instead, we will use Mongoose and Cheerio to scrape news from another site.
+
+#### The following technology will be used for this homework.
+Run npm init. When that's finished, install and save these npm packages:
+-express
+-express-handlebars
+-mongoose
+-body-parser
+-cheerio
+-request
+
+#### To launch this app in a browser use the following https.
 https://rhubarb-sundae-70868.herokuapp.com/
 
 
